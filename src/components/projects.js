@@ -22,7 +22,7 @@ export default function Projects() {
     return (
         <section id='projects' className="flex flex-col py-20 px-5 justify-center bg-primary text-white">
             <div className="w-full">
-                <div className="flex flex-col px-10 py-5">
+                <div className="flex flex-col px-10 py-6">
                     <h1 className="text-4xl border-b-4 border-secondary mb-5 w-[150px] font-bold">Projects</h1>
                     <p>These are some of my best projects. I have built them using HTML, CSS, JavaScript, Java, Spring Boot, and MySQL. Check them out below.</p>
                 </div>
@@ -30,9 +30,9 @@ export default function Projects() {
             <div className="w-full">
                 <div className='flex flex-col md:flex-row flex-wrap gap-5 px-10 justify-center'>
                     {config.projects.map((project, index) => (
-                        <div key={index} className='relative bg-secondary rounded-lg shadow-md overflow-hidden w-full max-w-md md:w-[500px]'>
+                        <div key={index} className='relative bg-secondary rounded-lg shadow-md overflow-hidden w-full max-w-md md:w-[700px]'>
                             <img
-                                className='w-full h-[200px] object-cover'
+                                className='w-full h-auto aspect-video object-contain sm:object-cover'
                                 src={project.image}
                                 alt={`Project screenshot ${index + 1}`}
                             />
